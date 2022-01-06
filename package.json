@@ -1,11 +1,11 @@
 {
-  "name": "starter-restaurant-reservation",
+  "name": "Restaurant Reservation App",
   "version": "1.0.0",
-  "description": "Starter project restaurant reservation system",
+  "description": "Reservation system for fine dining restaurants.",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Thinkful-Ed/starter-restaurant-reservation"
+    "url": "https://github.com/louisbrent1992/Restaurant-Reservation-App.git"
   },
   "scripts": {
     "build": "npm -prefix front-end run build",

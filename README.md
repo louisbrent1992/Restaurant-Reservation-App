@@ -188,7 +188,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - louisbrent1992@gmail.com
+Your Name - [@louisbrent1992](https://twitter.com/louisbrent1992) - louisbrent1992@gmail.com
 
 Project Link: [https://github.com/louisbrent1992/restaurant-reservation-app](https://github.com/louisbrent1992/restaurant-reservation-app)
 
