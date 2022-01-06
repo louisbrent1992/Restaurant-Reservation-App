@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://restaurant-frontend-deployment.herokuapp.com/">
-    <img src="./Public/images/dashboardScreen.jpg" alt="Logo" width="80" height="80">
+    <img src="./Public/images/dashboardScreen.jpg" alt="Logo" width="500" height="500">
   </a>
 
 <h3 align="center">Restaurant Reservation App</h3>
