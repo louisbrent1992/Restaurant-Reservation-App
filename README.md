@@ -29,14 +29,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/louisbrent1992/restaurant-reservation-app">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://restaurant-frontend-deployment.herokuapp.com/">
+    <img src="./Public/images/dashboardScreen.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Restaurant Reservation App</h3>
 
   <p align="center">
-    Periodic Tables, a startup that is creating a reservation system for fine dining restaurants. The software is used only by restaurant personnel when a customer calls to request a reservation. At this point, the customers will not access the system online.
+    Reservation system for fine dining restaurants. The software is used only by restaurant personnel when a customer calls to request a reservation. The customer will not have access to the system online.
     <br />
     <a href="https://github.com/louisbrent1992/restaurant-reservation-app"><strong>Explore the docs »</strong></a>
     <br />
@@ -82,7 +82,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Restaurant Reservation App Screen Shot][product-screenshot]](https://example.com)
+<br />
+[![Restaurant Reservation App Screen Shot 2][product-screenshot 2]](https://example.com)
+<br />
+[![Restaurant Reservation App Screen Shot 3][product-screenshot 3]](https://example.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -188,7 +192,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@louisbrent1992](https://twitter.com/louisbrent1992) - louisbrent1992@gmail.com
+Louis Brent - [@louisbrent1992](https://twitter.com/louisbrent1992) - louisbrent1992@gmail.com
 
 Project Link: [https://github.com/louisbrent1992/restaurant-reservation-app](https://github.com/louisbrent1992/restaurant-reservation-app)
 
@@ -199,9 +203,7 @@ Project Link: [https://github.com/louisbrent1992/restaurant-reservation-app](htt
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* Thinkful
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -221,4 +223,6 @@ Project Link: [https://github.com/louisbrent1992/restaurant-reservation-app](htt
 [license-url]: https://github.com/louisbrent1992/restaurant-reservation-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/louis-brent
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: ./Public/images/newReservationScreen.jpg
+[product-screenshot 2]: ./Public/images/newTableScreen.jpg
+[product-screenshot 3]: ./Public/images/searchScreen.jpg
