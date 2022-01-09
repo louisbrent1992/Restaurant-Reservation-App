@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://restaurant-frontend-deployment.herokuapp.com/">
+  <a target="_blank" href="https://restaurant-frontend-deployment.herokuapp.com/">
     <img src="./Public/images/dashboardScreen.jpg" alt="Logo">
   </a>
 
@@ -41,11 +41,11 @@
     <a href="https://github.com/louisbrent1992/restaurant-reservation-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://restaurant-frontend-deployment.herokuapp.com/dashboard">View Demo</a>
+    <a target="_blank" href="https://restaurant-frontend-deployment.herokuapp.com/dashboard">View Demo</a>
     ·
-    <a href="https://github.com/louisbrent1992/restaurant-reservation-app/issues">Report Bug</a>
+    <a target="_blank" href="https://github.com/louisbrent1992/restaurant-reservation-app/issues">Report Bug</a>
     ·
-    <a href="https://github.com/louisbrent1992/restaurant-reservation-app/issues">Request Feature</a>
+    <a target="_blank" href="https://github.com/louisbrent1992/restaurant-reservation-app/issues">Request Feature</a>
   </p>
 </div>
 
@@ -119,16 +119,15 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/louisbrent1992/restaurant-reservation-app.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+3. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
