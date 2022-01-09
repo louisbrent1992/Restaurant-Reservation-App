@@ -221,7 +221,7 @@ Project Link: [https://github.com/louisbrent1992/restaurant-reservation-app](htt
 [license-shield]: https://img.shields.io/github/license/louisbrent1992/restaurant-reservation-app.svg?style=for-the-badge
 [license-url]: https://github.com/louisbrent1992/restaurant-reservation-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/louis-brent
+[linkedin-url]: https://www.linkedin.com/in/louis-brent/
 [product-screenshot]: ./Public/images/newReservationScreen.jpg
 [product-screenshot 2]: ./Public/images/newTableScreen.jpg
 [product-screenshot 3]: ./Public/images/searchScreen.jpg
