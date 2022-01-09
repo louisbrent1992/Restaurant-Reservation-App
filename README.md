@@ -41,7 +41,7 @@
     <a href="https://github.com/louisbrent1992/restaurant-reservation-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/louisbrent1992/restaurant-reservation-app">View Demo</a>
+    <a href="https://restaurant-frontend-deployment.herokuapp.com/dashboard">View Demo</a>
     ·
     <a href="https://github.com/louisbrent1992/restaurant-reservation-app/issues">Report Bug</a>
     ·
