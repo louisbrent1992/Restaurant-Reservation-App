@@ -7,8 +7,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -17,14 +15,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -48,8 +45,6 @@
     <a target="_blank" href="https://github.com/louisbrent1992/restaurant-reservation-app/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -77,9 +72,8 @@
   </ol>
 </details>
 
-
-
 <!-- Project Screenshots -->
+
 ## Project Screenshots
 
 [![Restaurant Reservation App Screen Shot][product-screenshot]](https://example.com)
@@ -90,20 +84,17 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
-* [React.js](https://reactjs.org/)
-* [Bootstrap](https://getbootstrap.com)
-* [Express](https://expressjs.com)
-* [Knex](https://knexjs.org)
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com)
+- [Express](https://expressjs.com)
+- [Knex](https://knexjs.org)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -112,7 +103,8 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+
+- npm
   ```sh
   npm install npm@latest -g
   ```
@@ -129,14 +121,13 @@ This is an example of how to list things you need to use the software and how to
    ```
 3. Enter your API in `config.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   const API_KEY = "ENTER YOUR API";
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -145,23 +136,21 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ROADMAP -->
+
 ## Roadmap
 
 - [] Feature 1
 - [] Feature 2
 - [] Feature 3
-    - [] Nested Feature
+  - [] Nested Feature
 
 See the [open issues](https://github.com/louisbrent1992/restaurant-reservation-app/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -177,18 +166,16 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Louis Brent - [@louisbrent1992](https://twitter.com/louisbrent1992) - louisbrent1992@gmail.com
@@ -197,19 +184,17 @@ Project Link: [https://github.com/louisbrent1992/restaurant-reservation-app](htt
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
-* Thinkful
+- Thinkful
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/louisbrent1992/restaurant-reservation-app.svg?style=for-the-badge
 [contributors-url]: https://github.com/louisbrent1992/restaurant-reservation-app/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/louisbrent1992/restaurant-reservation-app.svg?style=for-the-badge
@@ -222,6 +207,6 @@ Project Link: [https://github.com/louisbrent1992/restaurant-reservation-app](htt
 [license-url]: https://github.com/louisbrent1992/restaurant-reservation-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/louis-brent/
-[product-screenshot]: ./Public/images/newReservationScreen.jpg
-[product-screenshot 2]: ./Public/images/newTableScreen.jpg
-[product-screenshot 3]: ./Public/images/searchScreen.jpg
+[product-screenshot]: ./Public/images/newReservation.jpg
+[product-screenshot 2]: ./Public/images/newTable.jpg
+[product-screenshot 3]: ./Public/images/search.jpg
