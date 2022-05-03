@@ -78,7 +78,9 @@
 
 [![Restaurant Reservation App Screen Shot][product-screenshot]](https://example.com)
 <br />
+<br />
 [![Restaurant Reservation App Screen Shot 2][product-screenshot 2]](https://example.com)
+<br />
 <br />
 [![Restaurant Reservation App Screen Shot 3][product-screenshot 3]](https://example.com)
 
@@ -140,10 +142,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-  - [] Nested Feature
+- [x] List Reservations
+  - [x] List reservations by date
+  - [x] Show status of reservation (e.g. "booked" or "cancelled")
+- [x] Create new reservations
+  - [x] Restaurant time constraints for each reservation (e.g "restaurant is closed on Tuesday's")  
+- [x] Modify existing reservation
 
 See the [open issues](https://github.com/louisbrent1992/restaurant-reservation-app/issues) for a full list of proposed features (and known issues).
 
@@ -207,6 +211,6 @@ Project Link: [https://github.com/louisbrent1992/restaurant-reservation-app](htt
 [license-url]: https://github.com/louisbrent1992/restaurant-reservation-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/louis-brent/
-[product-screenshot]: ./Public/images/newReservation.jpg
-[product-screenshot 2]: ./Public/images/newTable.jpg
-[product-screenshot 3]: ./Public/images/search.jpg
+[product-screenshot]: ./Public/images/newReservation.png
+[product-screenshot 2]: ./Public/images/newTable.png
+[product-screenshot 3]: ./Public/images/search.png
