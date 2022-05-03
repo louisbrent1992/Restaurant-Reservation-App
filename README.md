@@ -148,6 +148,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Create new reservations
   - [x] Restaurant time constraints for each reservation (e.g "restaurant is closed on Tuesday's")  
 - [x] Modify existing reservation
+- [x] Search reservations
 
 See the [open issues](https://github.com/louisbrent1992/restaurant-reservation-app/issues) for a full list of proposed features (and known issues).
 
