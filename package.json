@@ -1,7 +1,7 @@
 {
 	"name": "restaurant-reservation-app",
 	"version": "1.0.0",
-	"description": "Reservation system for fine dining restaurants.",
+	"description": "Reservation system for fine-dining restaurants.",
 	"private": true,
 	"repository": {
 		"type": "git",
