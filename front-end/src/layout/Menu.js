@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import icon from "../assets/favicon.png";
 
+console.log(icon);
 /**
  * Defines the menu for this application.
  *
@@ -11,7 +13,16 @@ function Menu() {
   return (
     <nav className="navbar-dark pt-2 pb-2">
       <div className="container-fluid d-flex justify-content-between">
-        <Link className="navbar-brand sidebar-brand  d-flex m-0" to="/">
+        <Link
+          className="navbar-brand sidebar-brand  d-flex m-0 align-items-center"
+          to="/"
+        >
+          <img
+            src={icon}
+            alt="logo"
+            className="img-thumbnail mr-2"
+            style={{ width: "20p", height: "20px" }}
+          />
           <div className="sidebar-brand-text">
             <span>Periodic Tables</span>
           </div>
