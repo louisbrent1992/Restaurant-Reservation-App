@@ -62,7 +62,7 @@ export default function Search() {
             name="mobile_number"
             id="mobile_number"
             type="tel"
-            placeholder="Enter a customer's phone number"
+            placeholder="Enter customer's phone number"
             onChange={handleChange}
             value={FormData.mobile_number}
             required
