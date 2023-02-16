@@ -38,7 +38,7 @@
     <a href="https://github.com/louisbrent1992/restaurant-reservation-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a target="_blank" href="https://restaurant-frontend-deployment.herokuapp.com/dashboard">View Demo</a>
+    <a target="_blank" href="https://restaurant-reservations-app.vercel.app/dashboard">View Demo</a>
     ·
     <a target="_blank" href="https://github.com/louisbrent1992/restaurant-reservation-app/issues">Report Bug</a>
     ·
@@ -146,7 +146,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [x] List reservations by date
   - [x] Show status of reservation (e.g. "booked" or "cancelled")
 - [x] Create new reservations
-  - [x] Restaurant time constraints for each reservation (e.g "restaurant is closed on Tuesday's")  
+  - [x] Restaurant time constraints for each reservation (e.g "restaurant is closed on Tuesday's")
 - [x] Modify existing reservation
 - [x] Search reservations
 
