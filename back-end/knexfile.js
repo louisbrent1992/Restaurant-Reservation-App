@@ -33,7 +33,7 @@ module.exports = {
 		client: "pg",
 		pool: { min: 1, max: 5 },
 		connection: {
-			CLIENT_URL_PRODUCTION,
+			connectionString: CLIENT_URL_PRODUCTION,
 			ssl: DB_SSL ? { rejectUnauthorized: false } : true,
 			debug: !!DEBUG,
 		},
