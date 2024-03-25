@@ -35,7 +35,7 @@ function list(date) {
 			status: "finished",
 			status: "cancelled",
 		})
-		.select("reservation_id");
+		.select("*");
 }
 
 function search(mobile_number) {
