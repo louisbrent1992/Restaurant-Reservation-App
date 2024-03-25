@@ -1,67 +1,57 @@
 /**
- * Knex configuration file.
+ * Knex uration file.
  *
  * You will not need to make changes to this file.
  */
 
-require('dotenv').config();
+require("dotenv").config();
 const path = require("path");
 
 const {
-  DATABASE_URL = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_DEVELOPMENT = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_TEST = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_PREVIEW = "postgresql://postgres@localhost/postgres",
-  DEBUG,
+	DATABASE_URL_PRODUCTION,
+	DATABASE_URL_DEVELOPMENT,
+	DB_HOST,
+	DB_USER,
+	DB_NAME,
+	DB_PASSWORD,
+	DB_SSL,
+	DB_PORT,
+	DEBUG,
 } = process.env;
 
 module.exports = {
-  development: {
-    client: "postgresql",
-    pool: { min: 1, max: 5 },
-    connection: DATABASE_URL_DEVELOPMENT,
-    migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
-    },
-    seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
-    },
-    debug: !!DEBUG,
-  },
-  test: {
-    client: "postgresql",
-    pool: { min: 1, max: 5 },
-    connection: DATABASE_URL_TEST,
-    migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
-    },
-    seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
-    },
-    debug: !!DEBUG,
-  },
-  preview: {
-    client: "postgresql",
-    pool: { min: 1, max: 5 },
-    connection: DATABASE_URL_PREVIEW,
-    migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
-    },
-    seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
-    },
-    debug: !!DEBUG,
-  },
-  production: {
-    client: "postgresql",
-    pool: { min: 1, max: 5 },
-    connection: DATABASE_URL,
-    migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
-    },
-    seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
-    },
-    debug: !!DEBUG,
-  },
+	development: {
+		client: "pg",
+		connection: {
+			connectionString: DATABASE_URL_DEVELOPMENT,
+			host: DB_HOST,
+			port: DB_PORT,
+			user: DB_USER,
+			database: DB_NAME,
+			password: DB_PASSWORD,
+			ssl: DB_SSL ? { rejectUnauthorized: false } : true,
+
+			debug: !!DEBUG,
+		},
+
+		migrations: {
+			directory: path.join(__dirname, "src", "db", "migrations"),
+		},
+		seeds: {
+			directory: path.join(__dirname, "src", "db", "seeds"),
+		},
+	},
+
+	production: {
+		client: "pg",
+		pool: { min: 1, max: 5 },
+		connection: DATABASE_URL_PRODUCTION,
+		migrations: {
+			directory: path.join(__dirname, "src", "db", "migrations"),
+		},
+		seeds: {
+			directory: path.join(__dirname, "src", "db", "seeds"),
+		},
+		debug: !!DEBUG,
+	},
 };
