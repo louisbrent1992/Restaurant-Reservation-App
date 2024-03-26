@@ -20,13 +20,16 @@ function Menu() {
 						src={icon}
 						alt="logo"
 						className="img-thumbnail mr-2"
-						style={{ width: "20p", height: "20px" }}
+						style={{ width: "40px", height: "40px" }}
 					/>
 					<div className="sidebar-brand-text">
-						<span>Periodic Tables</span>
+						<span>
+							Periodic Tables Dashboard: Precision Booking for Culinary
+							Professionals
+						</span>
 					</div>
 				</Link>
-				<ul className="navbar-nav text-light d-flex flex-row">
+				<ul className="navbar-nav text-light d-flex flex-row align-items-center">
 					<li className="nav-item mr-4">
 						<Link className="nav-link" to="/dashboard">
 							<span className="oi oi-dashboard" />
