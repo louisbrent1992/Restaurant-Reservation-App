@@ -2,109 +2,183 @@ import React, { useState } from "react";
 import ErrorAlert from "../layout/ErrorAlert";
 import { listReservations } from "../utils/api";
 import ListReservations from "../dashboard/ListReservations";
+import { Icons } from "../components/Icons";
 
 /**
- * Search component allows the user to search for a specific reservation
- * by entering in a phone number into the search field and display all
- * reservation(s) under the give phone number
+ * Lumière - Search Component
+ * Premium search interface with phone number lookup
  */
 export default function Search() {
 	const [mobileNumber, setMobileNumber] = useState("");
 	const [reservations, setReservations] = useState([]);
 	const [error, setError] = useState(null);
+	const [hasSearched, setHasSearched] = useState(false);
+	const [isSearching, setIsSearching] = useState(false);
 
-	/**
-	 * updates the state of mobileNumber when the user makes any changes to it
-	 */
 	function handleChange({ target }) {
 		setMobileNumber(target.value);
 	}
 
-	/** makes a get request to list all reservations under the given mobileNumber when the "submit" button is clicked */
 	function handleSubmit(event) {
 		event.preventDefault();
+		setIsSearching(true);
+		setHasSearched(true);
 		const abortController = new AbortController();
 		setError(null);
 
 		listReservations({ mobile_number: mobileNumber }, abortController.signal)
-			.then(setReservations)
-			.catch(setError);
+			.then((data) => {
+				setReservations(data);
+				setIsSearching(false);
+			})
+			.catch((err) => {
+				setError(err);
+				setIsSearching(false);
+			});
 
 		return () => abortController.abort();
 	}
 
-	/** returns all reservation(s), if any */
-	const searchResultsJSX = () => {
-		return reservations.length > 0 ? (
-			reservations.map((reservation) => (
-				<ListReservations
-					key={reservation.reservation_id}
-					reservation={reservation}
-				/>
-			))
-		) : (
-			<tr>
-				<td>No reservations found</td>
-			</tr>
-		);
-	};
-
 	return (
-		<div className="w-80 ml-2 pr-4 mr-4 pt-4" style={{ fontFamily: "Rubik" }}>
-			<h1 className="font-weight-bold d-flex justify-content-center mt-4 mb-4 pb-4">
-				Search
-			</h1>
-			<form>
+		<div className="animate-fade-in-up">
+			{/* Page Header */}
+			<div className="page-title">
+				<h1>
+					Search <span style={{
+						background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+						WebkitBackgroundClip: 'text',
+						WebkitTextFillColor: 'transparent',
+						backgroundClip: 'text'
+					}}>Reservations</span>
+				</h1>
+				<p>Find reservations by customer phone number</p>
+			</div>
+
+			{/* Search Form */}
+			<div style={{
+				maxWidth: '600px',
+				margin: '0 auto var(--space-10)'
+			}}>
 				{error && <ErrorAlert error={error} />}
-				<div className="input-group w-50">
-					<input
-						className="form-control mr-2 border-dark rounded"
-						name="mobile_number"
-						id="mobile_number"
-						type="tel"
-						placeholder="Enter customer's phone number"
-						onChange={handleChange}
-						value={FormData.mobile_number}
-						required
-					/>
-					<button
-						className="btn-xs btn-outline-0 btn-primary rounded px-2 pb-1"
-						type="submit"
-						onClick={handleSubmit}
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
-							fill="currentColor"
-							className="bi bi-search"
-							viewBox="0 0 16 16"
+
+				<form onSubmit={handleSubmit}>
+					<div className="search-container" style={{ maxWidth: '100%' }}>
+						<Icons.Search
+							size={20}
+							className="search-icon"
+						/>
+						<input
+							className="search-input"
+							name="mobile_number"
+							id="mobile_number"
+							type="tel"
+							placeholder="Enter customer's phone number..."
+							onChange={handleChange}
+							value={mobileNumber}
+							required
+							style={{ paddingRight: '120px' }}
+						/>
+						<button
+							className="btn btn-primary search-btn"
+							type="submit"
+							disabled={isSearching || !mobileNumber}
+							style={{
+								position: 'absolute',
+								right: 'var(--space-2)',
+								top: '50%',
+								transform: 'translateY(-50%)'
+							}}
 						>
-							<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-						</svg>
-					</button>
+							{isSearching ? (
+								<>
+									<div className="loading-spinner" style={{ width: '16px', height: '16px' }} />
+								</>
+							) : (
+								<>
+									<Icons.Search size={16} />
+									Search
+								</>
+							)}
+						</button>
+					</div>
+				</form>
+			</div>
+
+			{/* Search Results */}
+			{hasSearched && (
+				<div className="glass-card animate-fade-in-up">
+					<div className="section-header">
+						<h2 className="section-title">
+							<div className="section-title-icon">
+								<Icons.Search size={20} />
+							</div>
+							Search Results
+						</h2>
+						<span style={{
+							fontSize: 'var(--text-sm)',
+							color: 'var(--color-dark-400)'
+						}}>
+							{reservations.length} {reservations.length === 1 ? 'result' : 'results'} found
+						</span>
+					</div>
+
+					{reservations.length > 0 ? (
+						<div className="table-responsive">
+							<table className="data-table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Guest</th>
+										<th>Phone</th>
+										<th>Date</th>
+										<th>Time</th>
+										<th>Party Size</th>
+										<th>Status</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									{reservations.map((reservation, index) => (
+										<ListReservations
+											key={reservation.reservation_id}
+											reservation={reservation}
+											animationDelay={index * 50}
+										/>
+									))}
+								</tbody>
+							</table>
+						</div>
+					) : (
+						<div className="empty-state">
+							<div className="empty-state-icon">
+								<Icons.Search size={40} />
+							</div>
+							<h3 className="empty-state-title">No reservations found</h3>
+							<p className="empty-state-text">
+								No reservations match the phone number "{mobileNumber}"
+							</p>
+						</div>
+					)}
 				</div>
-			</form>
+			)}
 
-			<table className="table table-hover mt-4">
-				<thead className="thead-dark">
-					<tr className="text-center">
-						<th scope="col">ID</th>
-						<th scope="col text-center">First Name</th>
-						<th scope="col text-center">Last Name</th>
-						<th scope="col text-center">Mobile Number</th>
-						<th scope="col">Date</th>
-						<th scope="col">Time</th>
-						<th scope="col">People</th>
-						<th scope="col">Status</th>
-						<th scope="col">Edit</th>
-						<th scope="col">Cancel</th>
-						<th scope="col">Seat</th>
-					</tr>
-				</thead>
-
-				<tbody>{searchResultsJSX()}</tbody>
-			</table>
+			{/* Initial State */}
+			{!hasSearched && (
+				<div className="glass-card" style={{ textAlign: 'center' }}>
+					<div className="empty-state">
+						<div className="empty-state-icon" style={{
+							background: 'rgba(245, 158, 11, 0.1)',
+							color: 'var(--color-gold-400)'
+						}}>
+							<Icons.Phone size={40} />
+						</div>
+						<h3 className="empty-state-title">Search by Phone Number</h3>
+						<p className="empty-state-text">
+							Enter a customer's phone number above to find their reservations
+						</p>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 }

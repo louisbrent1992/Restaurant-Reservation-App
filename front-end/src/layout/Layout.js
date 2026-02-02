@@ -1,27 +1,19 @@
 import React from "react";
 import Menu from "./Menu";
 import Routes from "./Routes";
-
-import "./Layout.css";
+import "../styles/index.css";
 
 /**
- * Defines the main layout of the application.
- *
- * You will not need to make changes to this file.
- *
- * @returns {JSX.Element}
+ * Lumière - Main Layout Component
+ * Modern restaurant reservation system layout with premium dark theme
  */
 function Layout() {
   return (
-    <div className="">
-      <div>
-        <div className="side-bar">
-          <Menu />
-        </div>
-        <div className="col">
-          <Routes />
-        </div>
-      </div>
+    <div className="app-layout">
+      <Menu />
+      <main className="main-content animate-fade-in">
+        <Routes />
+      </main>
     </div>
   );
 }
